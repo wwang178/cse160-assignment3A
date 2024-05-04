@@ -260,7 +260,8 @@ function initTextures() {
     // Register the event handler to be called on loading an image
     image.onload = function () { sendImageToTEXTURE0(image); };
     // Tell the browser to load an image
-    image.src = '../resources/sky.jpg';
+    // image.src = '../resources/sky.jpg';
+    image.src = "https://wwang178.github.io/cse160-assignment3A/resources/sky.jpg";
 
     var image1 = new Image();
     if(!image1){
@@ -269,7 +270,8 @@ function initTextures() {
     }
 
     image1.onload = function () { sendImageToTEXTURE1(image1); };
-    image1.src = '../resources/dirt.jpg';
+    //image1.src = '../resources/dirt.jpg';
+    image1.src = "https://wwang178.github.io/cse160-assignment3A/resources/dirt.jpg";
 
     return true;
 }
