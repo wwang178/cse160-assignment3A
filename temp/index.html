@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Change a point color</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">
+    Please use a browser that supports "canvas"
+    </canvas>
+
+    <button type="button" id="doAFlipButton">Do a flip</button>
+
+    <!-- left arm -->
+    <p>
+    upperArmL <input type="range" min="0" max="60" value="0" class="slider" id="upperArmLSlide">
+    Animation:
+    <button type="button" id="animationUpperArmLOnButton">ON</button>
+    <button type="button" id="animationUpperArmLOffButton">OFF</button>
+    <p>
+    clawInnerL <input type="range" min="300" max="360" value="360" class="slider" id="clawInnerLSlide">
+    Animation:
+    <button type="button" id="animationClawInnerLOnButton">ON</button>
+    <button type="button" id="animationClawInnerLOffButton">OFF</button>
+    <p>
+    clawOuterL <input type="range" min="0" max="60" value="0" class="slider" id="clawOuterLSlide">
+    Animation:
+    <button type="button" id="animationClawOuterLOnButton">ON</button>
+    <button type="button" id="animationClawOuterLOffButton">OFF</button>
+    <hr>
+    
+    <!-- left legs -->
+    <p>
+    upperLegL1 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegL1Slide">
+    Animation:
+    <button type="button" id="animationUpperLegL1OnButton">ON</button>
+    <button type="button" id="animationUpperLegL1OffButton">OFF</button>
+    lowerLegL1 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegL1Slide">
+    Animation:
+    <button type="button" id="animationLowerLegL1OnButton">ON</button>
+    <button type="button" id="animationLowerLegL1OffButton">OFF</button>
+
+    <p>
+    upperLegL2 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegL2Slide">
+    Animation:
+    <button type="button" id="animationUpperLegL2OnButton">ON</button>
+    <button type="button" id="animationUpperLegL2OffButton">OFF</button>
+    lowerLegL2 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegL2Slide">
+    Animation:
+    <button type="button" id="animationLowerLegL2OnButton">ON</button>
+    <button type="button" id="animationLowerLegL2OffButton">OFF</button>
+
+    <p>
+    upperLegL3 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegL3Slide">
+    Animation:
+    <button type="button" id="animationUpperLegL3OnButton">ON</button>
+    <button type="button" id="animationUpperLegL3OffButton">OFF</button>
+    lowerLegL3 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegL3Slide">
+    Animation:
+    <button type="button" id="animationLowerLegL3OnButton">ON</button>
+    <button type="button" id="animationLowerLegL3OffButton">OFF</button>
+    <hr>
+
+    <!-- right arm -->
+    <p>
+    upperArmR <input type="range" min="300" max="360" value="360" class="slider" id="upperArmRSlide">
+    Animation:
+    <button type="button" id="animationUpperArmROnButton">ON</button>
+    <button type="button" id="animationUpperArmROffButton">OFF</button>
+    <p>
+    clawInnerR <input type="range" min="300" max="360" value="300" class="slider" id="clawInnerRSlide">
+    Animation:
+    <button type="button" id="animationClawInnerROnButton">ON</button>
+    <button type="button" id="animationClawInnerROffButton">OFF</button>
+    <p>
+    clawOuterR <input type="range" min="0" max="60" value="0" class="slider" id="clawOuterRSlide">
+    Animation:
+    <button type="button" id="animationClawOuterROnButton">ON</button>
+    <button type="button" id="animationClawOuterROffButton">OFF</button>
+    <hr>
+
+    <!-- right legs -->
+    <p>
+    upperLegR1 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegR1Slide">
+    Animation:
+    <button type="button" id="animationUpperLegR1OnButton">ON</button>
+    <button type="button" id="animationUpperLegR1OffButton">OFF</button>
+    lowerLegR1 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegR1Slide">
+    Animation:
+    <button type="button" id="animationLowerLegR1OnButton">ON</button>
+    <button type="button" id="animationLowerLegR1OffButton">OFF</button>
+
+    <p>
+    upperLegR2 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegR2Slide">
+    Animation:
+    <button type="button" id="animationUpperLegR2OnButton">ON</button>
+    <button type="button" id="animationUpperLegR2OffButton">OFF</button>
+    lowerLegR2 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegR2Slide">
+    Animation:
+    <button type="button" id="animationLowerLegR2OnButton">ON</button>
+    <button type="button" id="animationLowerLegR2OffButton">OFF</button>
+
+    <p>
+    upperLegR3 <input type="range" min="-30" max="30" value="0" class="slider" id="upperLegR3Slide">
+    Animation:
+    <button type="button" id="animationUpperLegR3OnButton">ON</button>
+    <button type="button" id="animationUpperLegR3OffButton">OFF</button>
+    lowerLegR3 <input type="range" min="0" max="30" value="0" class="slider" id="lowerLegR3Slide">
+    Animation:
+    <button type="button" id="animationLowerLegR3OnButton">ON</button>
+    <button type="button" id="animationLowerLegR3OffButton">OFF</button>
+    <hr>
+    
+    <p>
+    Camera Angle (horizontal) <input type="range" min="-360" max="360" value="0" class="slider" id="angleHSlide">
+    <p>
+    Camera Angle (vertical) <input type="range" min="-360" max="360" value="0" class="slider" id="angleVSlide">
+    <hr>
+
+    <p>Features:</p>
+    <p>- Fully animated</p>
+    <p>- Three level joint in the claw (but the middle joint doesn't move because crab claws don't work like that)</p>
+    <p>- Vertical angle slider</p>
+    <p>- Can rotate the crab using the WASD keys</p>
+    <p>- Can make the crab do a flip</p>
+
+    <p>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/webgl-utils.js"></script>
+
+    <script src="src/Point.js"></script>
+    <script src="src/Triangle.js"></script>
+    <script src="src/Circle.js"></script>
+    <script src="src/Cube.js"></script>
+    
+    <script src="src/BlockyAnimal.js"></script>
+  </body>
+</html>
